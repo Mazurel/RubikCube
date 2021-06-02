@@ -1,4 +1,4 @@
 { pkgs ? import <nixpkgs> {} }:
 pkgs.mkShell {
-    buildInputs = with pkgs; [ cmake ogre ];
+    buildInputs = with pkgs; [ doxygen cmake ogre ];
 }

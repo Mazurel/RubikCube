@@ -1,0 +1,45 @@
+\begin{theindex}
+
+  \item {addFace}
+    \subitem {RBox}, \hyperpage{3}
+
+  \indexspace
+
+  \item {cubeAt}
+    \subitem {RubikCube}, \hyperpage{7}
+
+  \indexspace
+
+  \item {generateAllMaterials}
+    \subitem {RBox}, \hyperpage{4}
+
+  \indexspace
+
+  \item {pitchFaces}
+    \subitem {RBox}, \hyperpage{4}
+
+  \indexspace
+
+  \item {RBox}, \hyperpage{2}
+    \subitem {addFace}, \hyperpage{3}
+    \subitem {generateAllMaterials}, \hyperpage{4}
+    \subitem {pitchFaces}, \hyperpage{4}
+    \subitem {RBox}, \hyperpage{3}
+  \item {RBox::RFace}, \hyperpage{4}
+  \item {rotate}
+    \subitem {RubikCube}, \hyperpage{7}
+  \item {Rotator}, \hyperpage{4}
+    \subitem {Rotator}, \hyperpage{5}
+    \subitem {update}, \hyperpage{5}
+  \item {RubikApp}, \hyperpage{6}
+  \item {RubikCube}, \hyperpage{6}
+    \subitem {cubeAt}, \hyperpage{7}
+    \subitem {rotate}, \hyperpage{7}
+    \subitem {RubikCube}, \hyperpage{6}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Rotator}, \hyperpage{5}
+
+\end{theindex}

@@ -1,0 +1,69 @@
+\hypertarget{classRubikCube}{}\doxysubsection{Rubik\+Cube Class Reference}
+\label{classRubikCube}\index{RubikCube@{RubikCube}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRubikCube_ace3431a40b928229e00e63d0c0481166}{Rubik\+Cube}} (Scene\+Manager $\ast$scn\+Mgr)
+\item 
+\mbox{\hyperlink{classRotator}{Rotator}} \mbox{\hyperlink{classRubikCube_af69168c347350fa6c41b2e1b9f0dfb3a}{rotate}} (const Rubiks\+Rotation rotation, bool alternative=false)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classRBox}{R\+Box}} $>$ \& \mbox{\hyperlink{classRubikCube_a28fea270bba7e0ed7cff381a01122a92}{cube\+At}} (const int x, const int y, const int z)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRubikCube_ad21114034563f7a2dd19cc40a823cddb}\label{classRubikCube_ad21114034563f7a2dd19cc40a823cddb}} 
+const Vector3 {\bfseries Origin} = Vector3(0, 0, 0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRubikCube_ace3431a40b928229e00e63d0c0481166}\label{classRubikCube_ace3431a40b928229e00e63d0c0481166}} 
+\index{RubikCube@{RubikCube}!RubikCube@{RubikCube}}
+\index{RubikCube@{RubikCube}!RubikCube@{RubikCube}}
+\doxyparagraph{\texorpdfstring{RubikCube()}{RubikCube()}}
+{\footnotesize\ttfamily Rubik\+Cube\+::\+Rubik\+Cube (\begin{DoxyParamCaption}\item[{Scene\+Manager $\ast$}]{scn\+Mgr }\end{DoxyParamCaption})}
+
+Default contructor, it takes Scene\+Manager and creates rubik cube at the origin of the scene 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRubikCube_a28fea270bba7e0ed7cff381a01122a92}\label{classRubikCube_a28fea270bba7e0ed7cff381a01122a92}} 
+\index{RubikCube@{RubikCube}!cubeAt@{cubeAt}}
+\index{cubeAt@{cubeAt}!RubikCube@{RubikCube}}
+\doxyparagraph{\texorpdfstring{cubeAt()}{cubeAt()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classRBox}{R\+Box}} $>$ \& Rubik\+Cube\+::cube\+At (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y,  }\item[{const int}]{z }\end{DoxyParamCaption})}
+
+Gets reference to pointer that points to cube at the location (x, y, z), according to Rubik\+Data type \mbox{\Hypertarget{classRubikCube_af69168c347350fa6c41b2e1b9f0dfb3a}\label{classRubikCube_af69168c347350fa6c41b2e1b9f0dfb3a}} 
+\index{RubikCube@{RubikCube}!rotate@{rotate}}
+\index{rotate@{rotate}!RubikCube@{RubikCube}}
+\doxyparagraph{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRotator}{Rotator}} Rubik\+Cube\+::rotate (\begin{DoxyParamCaption}\item[{const Rubiks\+Rotation}]{rotation,  }\item[{bool}]{alternative = {\ttfamily false} }\end{DoxyParamCaption})}
+
+This function does two things. First of all it applies rotation to internal matrix of boxes. For example for L rotation, where x = 0, rotation works as follows 
+\begin{DoxyPre}
+  (OZ -\/ Z axis, OY -\/ Y axis, Numbers are some faces):~\newline
+~\newline
+        OZ -\/>                <-\/ OY~\newline
+  OY   1  2  3   ROT\_L      7  4  1  OZ~\newline
+  |    4  5  6  -\/-\/-\/-\/-\/-\/-\/-\/>   8  5  2   |~\newline
+  v    7  8  9  (not alt)   9  6  3   v    ~\newline
+~\newline
+ \end{DoxyPre}
+ Above operation is applied with respect to proper rotation type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & Rotation to applied to the cube \\
+\hline
+{\em alternative} & If set to true, makes inverted rotation to the default one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRotator}{Rotator}} object, that represents proper animation 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rubik.\+h\item 
+rubik.\+cpp\end{DoxyCompactItemize}

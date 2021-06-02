@@ -183,7 +183,3 @@ Rotator RubikCube::rotate(const RubiksRotation rotation, bool alternative) {
 std::unique_ptr<RBox>& RubikCube::cubeAt(const int x, const int y, const int z) {
     return data->data()[x][y][z];
 }
-
-void RubikCube::nothing(int x) {
-
-}

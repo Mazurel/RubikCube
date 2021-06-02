@@ -1,0 +1,60 @@
+\hypertarget{classRotator}{}\doxysubsection{Rotator Class Reference}
+\label{classRotator}\index{Rotator@{Rotator}}
+
+
+This class rotates by 90 degrees group of Nodes around some axis over time.  
+
+
+
+
+{\ttfamily \#include $<$rotator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRotator_abb4037202f6e2c092eb6020ad5b04fa6}{Rotator}} (std\+::vector$<$ Node $\ast$ $>$ nodes, Vector3 axis)
+\item 
+\mbox{\Hypertarget{classRotator_a8d74fa4e7fcfee8e0292f42aba2ef6cc}\label{classRotator_a8d74fa4e7fcfee8e0292f42aba2ef6cc}} 
+\mbox{\hyperlink{classRotator_a8d74fa4e7fcfee8e0292f42aba2ef6cc}{Rotator}} (const \mbox{\hyperlink{classRotator}{Rotator}} \&copy)
+\begin{DoxyCompactList}\small\item\em Simple copy contructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRotator_a0be571d523df055dc7df3557b6329613}{update}} (Real dt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+This class rotates by 90 degrees group of Nodes around some axis over time. 
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRotator_abb4037202f6e2c092eb6020ad5b04fa6}\label{classRotator_abb4037202f6e2c092eb6020ad5b04fa6}} 
+\index{Rotator@{Rotator}!Rotator@{Rotator}}
+\index{Rotator@{Rotator}!Rotator@{Rotator}}
+\doxyparagraph{\texorpdfstring{Rotator()}{Rotator()}}
+{\footnotesize\ttfamily Rotator\+::\+Rotator (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Node $\ast$ $>$}]{nodes,  }\item[{Vector3}]{axis }\end{DoxyParamCaption})}
+
+Constructor that takes Nodes to be rotated along axis 
+\begin{DoxyParams}{Parameters}
+{\em nodes} & List of pointers of Nodes to be rotated \\
+\hline
+{\em axis} & Axis that nodes will be rotated along \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRotator_a0be571d523df055dc7df3557b6329613}\label{classRotator_a0be571d523df055dc7df3557b6329613}} 
+\index{Rotator@{Rotator}!update@{update}}
+\index{update@{update}!Rotator@{Rotator}}
+\doxyparagraph{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Rotator\+::update (\begin{DoxyParamCaption}\item[{Real}]{dt }\end{DoxyParamCaption})}
+
+Function that should be called every frame to make rotation happen 
+\begin{DoxyParams}{Parameters}
+{\em dt} & Time interval \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rotator.\+h\item 
+rotator.\+cpp\end{DoxyCompactItemize}
