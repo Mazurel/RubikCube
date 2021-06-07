@@ -15,10 +15,12 @@
 
 using namespace Ogre;
 
+/// This class inherits Ogre classes to show everything
 class RubikApp : public OgreBites::ApplicationContext,
                  public OgreBites::InputListener,
                  public OgreBites::TrayListener {
 public:
+    /// Constructs class
     RubikApp();
     void setup() override;
     bool keyPressed(const OgreBites::KeyboardEvent& evt) override;
@@ -33,11 +35,15 @@ public:
 
     void buttonHit(OgreBites::Button* b) override;
 private:
-    void generateSolidMaterial(String name, Vector3 color);
-    RBOX_FACE getCurrentFace();
-
+    /// Returns true if rotation animation is ON
     bool isCubeRotating();
+    /// Updates animation of the rotation
     void updateRotation(float dt);
+    /// Rotates cube (internal structure) and starts the animation
+    /// @param rotation Rotation type
+    /// @param alternative If alternative rotation should be applied
+    /// @param saveMove if it is set to true then the move will be added to 
+    ///                 the undo stack
     void rotateCube(const RubiksRotation rotation, bool alternative, bool saveMove=true);
 
     Ogre::SceneNode* cam;

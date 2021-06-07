@@ -1,0 +1,85 @@
+\hypertarget{box_8h}{}\doxysubsection{box.\+h File Reference}
+\label{box_8h}\index{box.h@{box.h}}
+{\ttfamily \#include \char`\"{}Ogre.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ogre\+Application\+Context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ogre\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRBox}{R\+Box}}
+\begin{DoxyCompactList}\small\item\em Represents cube inside Rubiks cube. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structRBox_1_1RFace}{R\+Box\+::\+R\+Face}}
+\begin{DoxyCompactList}\small\item\em This structure represents one face of the cube. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}{R\+B\+O\+X\+\_\+\+F\+A\+CE}} \{ \newline
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a0ad44897a70fba309c24a5b6007de3e3}{T\+OP}} = 0, 
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a8c371f4e766fb2c49c219bbc88989461}{B\+O\+T\+T\+OM}} = 1, 
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3adb45120aafd37a973140edee24708065}{L\+E\+FT}} = 2, 
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3aec8379af7490bb9eaaf579cf17876f38}{R\+I\+G\+HT}} = 3, 
+\newline
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a76bd5ec6ea9d8a1b582d8d5e43102a02}{F\+R\+O\+NT}} = 4, 
+\mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3ac921ff2cfc571c1d19b0485d7f6926ee}{B\+A\+CK}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that represents all possible faces that some cube may have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{box_8h_a6a13239a749035b71d0923781fea23cf}{to\+\_\+string}} (const \mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}{R\+B\+O\+X\+\_\+\+F\+A\+CE}} face)
+\begin{DoxyCompactList}\small\item\em Converts R\+B\+O\+X\+\_\+\+F\+A\+CE to its string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}} 
+\index{box.h@{box.h}!RBOX\_FACE@{RBOX\_FACE}}
+\index{RBOX\_FACE@{RBOX\_FACE}!box.h@{box.h}}
+\doxyparagraph{\texorpdfstring{RBOX\_FACE}{RBOX\_FACE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}{R\+B\+O\+X\+\_\+\+F\+A\+CE}}}
+
+
+
+Enum that represents all possible faces that some cube may have. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOP@{TOP}!box.h@{box.h}}\index{box.h@{box.h}!TOP@{TOP}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a0ad44897a70fba309c24a5b6007de3e3}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a0ad44897a70fba309c24a5b6007de3e3}} 
+T\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOTTOM@{BOTTOM}!box.h@{box.h}}\index{box.h@{box.h}!BOTTOM@{BOTTOM}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a8c371f4e766fb2c49c219bbc88989461}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a8c371f4e766fb2c49c219bbc88989461}} 
+B\+O\+T\+T\+OM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!box.h@{box.h}}\index{box.h@{box.h}!LEFT@{LEFT}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3adb45120aafd37a973140edee24708065}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3adb45120aafd37a973140edee24708065}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!box.h@{box.h}}\index{box.h@{box.h}!RIGHT@{RIGHT}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3aec8379af7490bb9eaaf579cf17876f38}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3aec8379af7490bb9eaaf579cf17876f38}} 
+R\+I\+G\+HT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRONT@{FRONT}!box.h@{box.h}}\index{box.h@{box.h}!FRONT@{FRONT}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a76bd5ec6ea9d8a1b582d8d5e43102a02}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3a76bd5ec6ea9d8a1b582d8d5e43102a02}} 
+F\+R\+O\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACK@{BACK}!box.h@{box.h}}\index{box.h@{box.h}!BACK@{BACK}}}\mbox{\Hypertarget{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3ac921ff2cfc571c1d19b0485d7f6926ee}\label{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3ac921ff2cfc571c1d19b0485d7f6926ee}} 
+B\+A\+CK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{box_8h_a6a13239a749035b71d0923781fea23cf}\label{box_8h_a6a13239a749035b71d0923781fea23cf}} 
+\index{box.h@{box.h}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!box.h@{box.h}}
+\doxyparagraph{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{box_8h_a6d9fb03978fcbb1acf72f5a863be86b3}{R\+B\+O\+X\+\_\+\+F\+A\+CE}}}]{face }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts R\+B\+O\+X\+\_\+\+F\+A\+CE to its string representation. 
+

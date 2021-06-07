@@ -18,12 +18,12 @@ struct \mbox{\hyperlink{structRBox_1_1RFace}{R\+Face}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classRBox_a44740dc1607e114814e70b2ebf02b263}{R\+Box}} (Scene\+Manager $\ast$mgr, Scene\+Node $\ast$parent, double x, double y, double z, double size)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs the cube (without initializing any faces) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRBox_a48f4a0f8a53202bfeb2637046f6a0e15}\label{classRBox_a48f4a0f8a53202bfeb2637046f6a0e15}} 
 Scene\+Node $\ast$ \mbox{\hyperlink{classRBox_a48f4a0f8a53202bfeb2637046f6a0e15}{get\+Node}} ()
 \begin{DoxyCompactList}\small\item\em Getter of the Scene\+Node pointer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRBox_a0bbb8ebdc51cdd391cc8eb53502c5dfa}{add\+Face}} (const R\+B\+O\+X\+\_\+\+F\+A\+CE face, const String \&color)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds new face to the cube. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRBox_a217bdc86db50a4500355d16c59d27be1}\label{classRBox_a217bdc86db50a4500355d16c59d27be1}} 
 void \mbox{\hyperlink{classRBox_a217bdc86db50a4500355d16c59d27be1}{fill\+Faces}} ()
 \begin{DoxyCompactList}\small\item\em Sets or faces that were not initialized to black. \end{DoxyCompactList}\item 
@@ -33,8 +33,9 @@ void \mbox{\hyperlink{classRBox_a217bdc86db50a4500355d16c59d27be1}{fill\+Faces}}
 \mbox{\Hypertarget{classRBox_ab309547029f84100be5078485fb39ef5}\label{classRBox_ab309547029f84100be5078485fb39ef5}} 
 const Axis\+Aligned\+Box \& \mbox{\hyperlink{classRBox_ab309547029f84100be5078485fb39ef5}{get\+Boundingbox\+From\+Face}} (const R\+B\+O\+X\+\_\+\+F\+A\+CE face)
 \begin{DoxyCompactList}\small\item\em Return bounding box of some face. Useful for Raycasting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRBox_a650b144134b0059dbfe45b0f3ff71aed}\label{classRBox_a650b144134b0059dbfe45b0f3ff71aed}} 
 void \mbox{\hyperlink{classRBox_a650b144134b0059dbfe45b0f3ff71aed}{pitch\+Faces}} (bool alternative=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Box face rotation. Required in order to make data inside \mbox{\hyperlink{classRBox}{R\+Box}} usable. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRBox_a1c0d37517efd7899465ad8e0b56fa56d}\label{classRBox_a1c0d37517efd7899465ad8e0b56fa56d}} 
 void {\bfseries yaw\+Faces} (bool alternative=false)
 \item 
@@ -44,7 +45,47 @@ void {\bfseries roll\+Faces} (bool alternative=false)
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classRBox_abaa075ea6dab998a19cf5c6dc6aafb47}\label{classRBox_abaa075ea6dab998a19cf5c6dc6aafb47}} 
 static void \mbox{\hyperlink{classRBox_abaa075ea6dab998a19cf5c6dc6aafb47}{generate\+All\+Materials}} ()
+\begin{DoxyCompactList}\small\item\em Generates all materials required for the cube to adopt all avaible colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRBox_a6f03bb8ff8c2927c13f30c54bb87b562}\label{classRBox_a6f03bb8ff8c2927c13f30c54bb87b562}} 
+Manual\+Object $\ast$ {\bfseries generate\+Face} (Manual\+Object $\ast$o, const String \&color, const R\+B\+O\+X\+\_\+\+F\+A\+CE face)
+\item 
+\mbox{\Hypertarget{classRBox_ab494d4d172355b0ca7618e87964a9736}\label{classRBox_ab494d4d172355b0ca7618e87964a9736}} 
+void {\bfseries swap\+Faces} (const R\+B\+O\+X\+\_\+\+F\+A\+CE f1, const R\+B\+O\+X\+\_\+\+F\+A\+CE f2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRBox_ad5dc4f70bbcd6d15a4ec312b845d77fa}\label{classRBox_ad5dc4f70bbcd6d15a4ec312b845d77fa}} 
+static void {\bfseries generate\+Material} (String name, Vector3 colors)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRBox_a05a593d92f9fecf3f1c83013b0d5dfc5}\label{classRBox_a05a593d92f9fecf3f1c83013b0d5dfc5}} 
+Real {\bfseries size}
+\item 
+\mbox{\Hypertarget{classRBox_aaaaf3194b061107c2576439a5c681898}\label{classRBox_aaaaf3194b061107c2576439a5c681898}} 
+Real {\bfseries x}
+\item 
+\mbox{\Hypertarget{classRBox_af80376a40a83ad08d77842fa3326adb0}\label{classRBox_af80376a40a83ad08d77842fa3326adb0}} 
+Real {\bfseries y}
+\item 
+\mbox{\Hypertarget{classRBox_ac24858a98522b5e5a55176fe5c7ee0eb}\label{classRBox_ac24858a98522b5e5a55176fe5c7ee0eb}} 
+Real {\bfseries z}
+\item 
+\mbox{\Hypertarget{classRBox_a5ce462c24ac7bc3b50c6d43a0d602cc6}\label{classRBox_a5ce462c24ac7bc3b50c6d43a0d602cc6}} 
+Scene\+Node $\ast$ {\bfseries node}
+\item 
+\mbox{\Hypertarget{classRBox_aa3cc1adf5e79dc229f4c6536bde75246}\label{classRBox_aa3cc1adf5e79dc229f4c6536bde75246}} 
+Scene\+Manager $\ast$ {\bfseries scn\+Mgr}
+\item 
+\mbox{\Hypertarget{classRBox_a23cc6ae9fd035f697ec83b6f70677f49}\label{classRBox_a23cc6ae9fd035f697ec83b6f70677f49}} 
+std\+::map$<$ R\+B\+O\+X\+\_\+\+F\+A\+CE, \mbox{\hyperlink{structRBox_1_1RFace}{R\+Face}} $>$ {\bfseries faces}
 \end{DoxyCompactItemize}
 
 
@@ -58,7 +99,11 @@ Represents cube inside Rubiks cube.
 \doxyparagraph{\texorpdfstring{RBox()}{RBox()}}
 {\footnotesize\ttfamily R\+Box\+::\+R\+Box (\begin{DoxyParamCaption}\item[{Scene\+Manager $\ast$}]{mgr,  }\item[{Scene\+Node $\ast$}]{parent,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z,  }\item[{double}]{size }\end{DoxyParamCaption})}
 
+
+
 Constructs the cube (without initializing any faces) 
+
+
 \begin{DoxyParams}{Parameters}
 {\em mgr} & Pointer to Scene\+Manager \\
 \hline
@@ -82,27 +127,18 @@ Constructs the cube (without initializing any faces)
 \doxyparagraph{\texorpdfstring{addFace()}{addFace()}}
 {\footnotesize\ttfamily void R\+Box\+::add\+Face (\begin{DoxyParamCaption}\item[{const R\+B\+O\+X\+\_\+\+F\+A\+CE}]{face,  }\item[{const String \&}]{color }\end{DoxyParamCaption})}
 
-Adds new face to the cube 
+
+
+Adds new face to the cube. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em face} & Location of the face (F\+R\+O\+NT, B\+A\+CK, etc) \\
 \hline
-{\em color} & Color of the face ~\newline
- \\
+{\em color} & Color of the face \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classRBox_abaa075ea6dab998a19cf5c6dc6aafb47}\label{classRBox_abaa075ea6dab998a19cf5c6dc6aafb47}} 
-\index{RBox@{RBox}!generateAllMaterials@{generateAllMaterials}}
-\index{generateAllMaterials@{generateAllMaterials}!RBox@{RBox}}
-\doxyparagraph{\texorpdfstring{generateAllMaterials()}{generateAllMaterials()}}
-{\footnotesize\ttfamily void R\+Box\+::generate\+All\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Generates all materials required for the cube to adopt all avaible colors \mbox{\Hypertarget{classRBox_a650b144134b0059dbfe45b0f3ff71aed}\label{classRBox_a650b144134b0059dbfe45b0f3ff71aed}} 
-\index{RBox@{RBox}!pitchFaces@{pitchFaces}}
-\index{pitchFaces@{pitchFaces}!RBox@{RBox}}
-\doxyparagraph{\texorpdfstring{pitchFaces()}{pitchFaces()}}
-{\footnotesize\ttfamily void R\+Box\+::pitch\+Faces (\begin{DoxyParamCaption}\item[{bool}]{alternative = {\ttfamily false} }\end{DoxyParamCaption})}
-
-Box face rotation. Required in order to make data inside \mbox{\hyperlink{classRBox}{R\+Box}} usable 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

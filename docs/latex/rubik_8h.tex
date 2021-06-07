@@ -1,0 +1,109 @@
+\hypertarget{rubik_8h}{}\doxysubsection{rubik.\+h File Reference}
+\label{rubik_8h}\index{rubik.h@{rubik.h}}
+{\ttfamily \#include \char`\"{}box.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rotator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ogre\+Scene\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ogre\+Scene\+Node.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRubikCube}{Rubik\+Cube}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}~3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{rubik_8h_a718e62508cd7d87689d918e923ea55d3}{R\+Box\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classRBox}{R\+Box}} $>$
+\begin{DoxyCompactList}\small\item\em Use unique pointer for memory safety. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{rubik_8h_aea649c8408bb73e968617ae1ac3ab808}{Rubik\+Data}} = std\+::array$<$ std\+::array$<$ std\+::array$<$ \mbox{\hyperlink{rubik_8h_a718e62508cd7d87689d918e923ea55d3}{R\+Box\+Ptr}}, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}} $>$, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}} $>$, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}} $>$
+\begin{DoxyCompactList}\small\item\em 3D Array -\/ Rubik\+Data\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33}{Rubiks\+Rotation}} \{ \newline
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33ad5cc1fa00f41f0bdbce86e8b7e3bb9ea}{R\+O\+T\+\_\+F}}, 
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33af575a864df0da482f318fff12d97c785}{R\+O\+T\+\_\+R}}, 
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a76fa54a26f1fb5f435ef9e0c451e18b8}{R\+O\+T\+\_\+U}}, 
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a8ffab829365bf064e4da2ac8e81bece9}{R\+O\+T\+\_\+B}}, 
+\newline
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a6643e048d366f1bf4b295753c3442c18}{R\+O\+T\+\_\+L}}, 
+\mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a92683bfdb375a5a7b86f69af8b8b6486}{R\+O\+T\+\_\+D}}
+ \}
+\begin{DoxyCompactList}\small\item\em All rotations are two ways operation, for example R has R\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}\label{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}} 
+\index{rubik.h@{rubik.h}!RUBIK\_SEGMENTS@{RUBIK\_SEGMENTS}}
+\index{RUBIK\_SEGMENTS@{RUBIK\_SEGMENTS}!rubik.h@{rubik.h}}
+\doxyparagraph{\texorpdfstring{RUBIK\_SEGMENTS}{RUBIK\_SEGMENTS}}
+{\footnotesize\ttfamily \#define R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS~3}
+
+
+
+\doxysubsubsection{Typedef Documentation}
+\mbox{\Hypertarget{rubik_8h_a718e62508cd7d87689d918e923ea55d3}\label{rubik_8h_a718e62508cd7d87689d918e923ea55d3}} 
+\index{rubik.h@{rubik.h}!RBoxPtr@{RBoxPtr}}
+\index{RBoxPtr@{RBoxPtr}!rubik.h@{rubik.h}}
+\doxyparagraph{\texorpdfstring{RBoxPtr}{RBoxPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{rubik_8h_a718e62508cd7d87689d918e923ea55d3}{R\+Box\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classRBox}{R\+Box}}$>$}
+
+
+
+Use unique pointer for memory safety. 
+
+\mbox{\Hypertarget{rubik_8h_aea649c8408bb73e968617ae1ac3ab808}\label{rubik_8h_aea649c8408bb73e968617ae1ac3ab808}} 
+\index{rubik.h@{rubik.h}!RubikData@{RubikData}}
+\index{RubikData@{RubikData}!rubik.h@{rubik.h}}
+\doxyparagraph{\texorpdfstring{RubikData}{RubikData}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{rubik_8h_aea649c8408bb73e968617ae1ac3ab808}{Rubik\+Data}} =  std\+::array$<$std\+::array$<$std\+::array$<$\mbox{\hyperlink{rubik_8h_a718e62508cd7d87689d918e923ea55d3}{R\+Box\+Ptr}}, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}$>$, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}$>$, \mbox{\hyperlink{rubik_8h_abfbfc292150a2b56ba02ed8c6ecb6c50}{R\+U\+B\+I\+K\+\_\+\+S\+E\+G\+M\+E\+N\+TS}}$>$}
+
+
+
+3D Array -\/ Rubik\+Data\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]} 
+
+
+
+\doxysubsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33}} 
+\index{rubik.h@{rubik.h}!RubiksRotation@{RubiksRotation}}
+\index{RubiksRotation@{RubiksRotation}!rubik.h@{rubik.h}}
+\doxyparagraph{\texorpdfstring{RubiksRotation}{RubiksRotation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33}{Rubiks\+Rotation}}}
+
+
+
+All rotations are two ways operation, for example R has R\textquotesingle{}. 
+
+This enum defines only one way rotations \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_F@{ROT\_F}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_F@{ROT\_F}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33ad5cc1fa00f41f0bdbce86e8b7e3bb9ea}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33ad5cc1fa00f41f0bdbce86e8b7e3bb9ea}} 
+R\+O\+T\+\_\+F&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_R@{ROT\_R}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_R@{ROT\_R}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33af575a864df0da482f318fff12d97c785}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33af575a864df0da482f318fff12d97c785}} 
+R\+O\+T\+\_\+R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_U@{ROT\_U}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_U@{ROT\_U}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a76fa54a26f1fb5f435ef9e0c451e18b8}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a76fa54a26f1fb5f435ef9e0c451e18b8}} 
+R\+O\+T\+\_\+U&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_B@{ROT\_B}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_B@{ROT\_B}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a8ffab829365bf064e4da2ac8e81bece9}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a8ffab829365bf064e4da2ac8e81bece9}} 
+R\+O\+T\+\_\+B&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_L@{ROT\_L}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_L@{ROT\_L}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a6643e048d366f1bf4b295753c3442c18}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a6643e048d366f1bf4b295753c3442c18}} 
+R\+O\+T\+\_\+L&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROT\_D@{ROT\_D}!rubik.h@{rubik.h}}\index{rubik.h@{rubik.h}!ROT\_D@{ROT\_D}}}\mbox{\Hypertarget{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a92683bfdb375a5a7b86f69af8b8b6486}\label{rubik_8h_abec0437cec1f3fa6ae95ed316f5b4d33a92683bfdb375a5a7b86f69af8b8b6486}} 
+R\+O\+T\+\_\+D&\\
+\hline
+
+\end{DoxyEnumFields}

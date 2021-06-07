@@ -1,5 +1,10 @@
 \hypertarget{classRubikApp}{}\doxysubsection{Rubik\+App Class Reference}
 \label{classRubikApp}\index{RubikApp@{RubikApp}}
+
+
+This class inherits Ogre classes to show everything.  
+
+
 Inheritance diagram for Rubik\+App\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,6 +14,9 @@ Inheritance diagram for Rubik\+App\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classRubikApp_a71f79d317a145b814df0b96496ec5178}\label{classRubikApp_a71f79d317a145b814df0b96496ec5178}} 
+\mbox{\hyperlink{classRubikApp_a71f79d317a145b814df0b96496ec5178}{Rubik\+App}} ()
+\begin{DoxyCompactList}\small\item\em Constructs class. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRubikApp_a2fef7c23c533e729d4d4358cc44a66d5}\label{classRubikApp_a2fef7c23c533e729d4d4358cc44a66d5}} 
 void {\bfseries setup} () override
 \item 
@@ -36,6 +44,72 @@ bool {\bfseries frame\+Started} (const Ogre\+::\+Frame\+Event \&evt) override
 \mbox{\Hypertarget{classRubikApp_aad08e37e29c49269fbb98e1ecbab840d}\label{classRubikApp_aad08e37e29c49269fbb98e1ecbab840d}} 
 void {\bfseries button\+Hit} (Ogre\+Bites\+::\+Button $\ast$b) override
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRubikApp_a07306d71e59ee3a8d8ab587d1b35433b}\label{classRubikApp_a07306d71e59ee3a8d8ab587d1b35433b}} 
+bool \mbox{\hyperlink{classRubikApp_a07306d71e59ee3a8d8ab587d1b35433b}{is\+Cube\+Rotating}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if rotation animation is ON. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRubikApp_a4ff189434e2bfd4f57b4c9f3b39a0e34}\label{classRubikApp_a4ff189434e2bfd4f57b4c9f3b39a0e34}} 
+void \mbox{\hyperlink{classRubikApp_a4ff189434e2bfd4f57b4c9f3b39a0e34}{update\+Rotation}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates animation of the rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRubikApp_a561ac540de740d39601feea8189cb2e9}{rotate\+Cube}} (const Rubiks\+Rotation rotation, bool alternative, bool save\+Move=true)
+\begin{DoxyCompactList}\small\item\em Rotates cube (internal structure) and starts the animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRubikApp_ab31ec8b2c64e8fdda7fd1bdbbac6c698}\label{classRubikApp_ab31ec8b2c64e8fdda7fd1bdbbac6c698}} 
+Ogre\+::\+Scene\+Node $\ast$ {\bfseries cam}
+\item 
+\mbox{\Hypertarget{classRubikApp_ad99fc342c748c18583bd0b1b84120268}\label{classRubikApp_ad99fc342c748c18583bd0b1b84120268}} 
+Ogre\+::\+Scene\+Node $\ast$ {\bfseries light\+Node}
+\item 
+\mbox{\Hypertarget{classRubikApp_a401f0a966f2fb4745b1726e6f3dfaed8}\label{classRubikApp_a401f0a966f2fb4745b1726e6f3dfaed8}} 
+Ogre\+::\+Scene\+Node $\ast$ {\bfseries sky}
+\item 
+\mbox{\Hypertarget{classRubikApp_a3d92f3ab81005a6755206e073ef820d3}\label{classRubikApp_a3d92f3ab81005a6755206e073ef820d3}} 
+Ogre\+Bites\+::\+Camera\+Man $\ast$ {\bfseries camera\+Man}
+\item 
+\mbox{\Hypertarget{classRubikApp_afbc65a72a0a0c4804bfcc314d24eb54e}\label{classRubikApp_afbc65a72a0a0c4804bfcc314d24eb54e}} 
+Ogre\+Bites\+::\+Tray\+Manager $\ast$ {\bfseries m\+Tray\+Mgr}
+\item 
+\mbox{\Hypertarget{classRubikApp_a14727a477b5bbd66b8d20b77310d9b70}\label{classRubikApp_a14727a477b5bbd66b8d20b77310d9b70}} 
+std\+::optional$<$ \mbox{\hyperlink{classRubikCube}{Rubik\+Cube}} $>$ {\bfseries cube}
+\item 
+\mbox{\Hypertarget{classRubikApp_a4ccfef730cf289fa533aeb98311a29c2}\label{classRubikApp_a4ccfef730cf289fa533aeb98311a29c2}} 
+std\+::optional$<$ \mbox{\hyperlink{classRotator}{Rotator}} $>$ {\bfseries rotator}
+\item 
+\mbox{\Hypertarget{classRubikApp_a94a621850a3ba637b1ba7824ee81ad01}\label{classRubikApp_a94a621850a3ba637b1ba7824ee81ad01}} 
+std\+::stack$<$ std\+::tuple$<$ Rubiks\+Rotation, bool $>$ $>$ {\bfseries rotations}
+\item 
+\mbox{\Hypertarget{classRubikApp_a93233db1ccf19bbb87de1225e07a317b}\label{classRubikApp_a93233db1ccf19bbb87de1225e07a317b}} 
+bool {\bfseries alt} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+This class inherits Ogre classes to show everything. 
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRubikApp_a561ac540de740d39601feea8189cb2e9}\label{classRubikApp_a561ac540de740d39601feea8189cb2e9}} 
+\index{RubikApp@{RubikApp}!rotateCube@{rotateCube}}
+\index{rotateCube@{rotateCube}!RubikApp@{RubikApp}}
+\doxyparagraph{\texorpdfstring{rotateCube()}{rotateCube()}}
+{\footnotesize\ttfamily void Rubik\+App\+::rotate\+Cube (\begin{DoxyParamCaption}\item[{const Rubiks\+Rotation}]{rotation,  }\item[{bool}]{alternative,  }\item[{bool}]{save\+Move = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotates cube (internal structure) and starts the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & Rotation type \\
+\hline
+{\em alternative} & If alternative rotation should be applied \\
+\hline
+{\em save\+Move} & if it is set to true then the move will be added to the undo stack \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

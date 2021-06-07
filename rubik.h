@@ -32,6 +32,7 @@ enum RubiksRotation {
     ROT_D
 };
 
+/// Class that represents Rubik Cube
 class RubikCube {
 public:
     /// Default contructor, it takes SceneManager and creates rubik cube
@@ -42,13 +43,13 @@ public:
     /// First of all it applies rotation to internal matrix of boxes. 
     /// For example for L rotation, where x = 0, rotation works as follows 
     /// <pre>
-    ///  (OZ - Z axis, OY - Y axis, Numbers are some faces):\n
-    ///\n
-    ///        OZ ->                <- OY\n
-    ///  OY   1  2  3   ROT_L      7  4  1  OZ\n
-    ///  |    4  5  6  -------->   8  5  2   |\n
-    ///  v    7  8  9  (not alt)   9  6  3   v    \n
-    ///\n
+    ///  (OZ - Z axis, OY - Y axis, Numbers are some faces):
+    ///
+    ///        OZ ->                <- OY
+    ///  OY   1  2  3   ROT_L      7  4  1  OZ
+    ///  |    4  5  6  -------->   8  5  2   |
+    ///  v    7  8  9  (not alt)   9  6  3   v
+    ///
     /// </pre>
     /// Above operation is applied with respect to proper rotation type.
     ///
